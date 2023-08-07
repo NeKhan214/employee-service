@@ -12,7 +12,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(url = "http://localhost:8080/", value = "department-service") //value provide name for API Client
+//@FeignClient(url = "http://localhost:8080/", value = "department-service") //value provide name for API Client
+@FeignClient(name = "DEPARTMENT-SERVICE")
 public interface APIClient {
 
     @GetMapping("api/departments/getDepartmentByCode")
